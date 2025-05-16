@@ -51,7 +51,7 @@ src/main/java/com/example/try_gpt4_1/
 ## 📄 ドキュメント
 - [設計書](docs/設計書.md)
 - [API仕様](docs/API.md)
-- [クラス図（PlantUML）](docs/class-diagram.puml)
+- [クラス図（Mermaid）](docs/class-diagram.md)
 - [OpenAPI定義](docs/openapi.yaml)
 - [Service層テスト観点](docs/test-case.md)
 
