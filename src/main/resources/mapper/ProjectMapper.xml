@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.try_gpt4_1.feature.project.repository.ProjectRepository">
+    <resultMap id="ProjectResultMap" type="com.example.try_gpt4_1.common.entity.Project">
+        <id property="id" column="id" />
+        <result property="customerId" column="customer_id" />
+        <result property="departmentName" column="department_name" />
+        <result property="projectManager" column="project_manager" />
+        <result property="projectLeader" column="project_leader" />
+        <result property="projectRank" column="project_rank" javaType="com.example.try_gpt4_1.common.entity.ProjectRank" />
+        <result property="salesAmount" column="sales_amount" />
+        <result property="startDate" column="start_date" javaType="java.time.LocalDate" />
+        <result property="endDate" column="end_date" javaType="java.time.LocalDate" />
+        <result property="projectType" column="project_type" javaType="com.example.try_gpt4_1.common.entity.ProjectType" />
+    </resultMap>
+
+    <select id="findById" resultMap="ProjectResultMap">
+        SELECT * FROM project WHERE id = #{id}
+    </select>
+
+    <select id="findAll" resultMap="ProjectResultMap">
+        SELECT * FROM project
+    </select>
+
+    <insert id="insert" parameterType="com.example.try_gpt4_1.common.entity.Project" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type)
+        VALUES (#{customerId}, #{departmentName}, #{projectManager}, #{projectLeader}, #{projectRank}, #{salesAmount}, #{startDate}, #{endDate}, #{projectType})
+    </insert>
+
+    <update id="update" parameterType="com.example.try_gpt4_1.common.entity.Project">
+        UPDATE project SET customer_id = #{customerId}, department_name = #{departmentName}, project_manager = #{projectManager}, project_leader = #{projectLeader}, project_rank = #{projectRank}, sales_amount = #{salesAmount}, start_date = #{startDate}, end_date = #{endDate}, project_type = #{projectType} WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM project WHERE id = #{id}
+    </delete>
+
+    <select id="count" resultType="int">
+        SELECT COUNT(*) FROM project
+    </select>
+</mapper>
