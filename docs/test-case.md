@@ -32,6 +32,11 @@
 - プロジェクト新規作成（salesAmountに応じてprojectRankが自動決定されることを検証）
 - プロジェクト更新（存在するID、バリデーションOK、存在するcustomerId）
 - プロジェクト更新（salesAmountに応じてprojectRankが自動決定されることを検証）
+  - salesAmount=12000ならSランクになること
+  - salesAmount=9000ならAランクになること
+  - salesAmount=6000ならBランクになること
+  - salesAmount=3000ならCランクになること
+  - salesAmount=1000ならDランクになること
 - プロジェクト削除（存在するID）
 
 ### 異常系
