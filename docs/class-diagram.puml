@@ -1,0 +1,39 @@
+@startuml
+' 顧客・プロジェクト管理システム クラス図
+
+class Customer {
+  +Long id
+  +String name
+  +String contact
+  +String industry
+}
+
+class Project {
+  +Long id
+  +Long customerId
+  +String departmentName
+  +String projectManager
+  +String projectLeader
+  +ProjectRank projectRank
+  +Integer salesAmount
+  +LocalDate startDate
+  +LocalDate endDate
+  +ProjectType projectType
+}
+
+enum ProjectRank {
+  S
+  A
+  B
+  C
+  D
+}
+
+enum ProjectType {
+  NEW_DEVELOPMENT
+  MAINTENANCE
+  PACKAGE_INTRODUCTION
+}
+
+Customer "1" <|-- "*" Project : customerId
+@enduml
