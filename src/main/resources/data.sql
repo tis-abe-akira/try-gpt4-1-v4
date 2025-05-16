@@ -1,0 +1,21 @@
+INSERT INTO customer (name, contact, industry) VALUES ('顧客A', 'a@example.com', 'IT');
+INSERT INTO customer (name, contact, industry) VALUES ('顧客B', 'b@example.com', '製造');
+INSERT INTO customer (name, contact, industry) VALUES ('顧客C', 'c@example.com', '流通');
+INSERT INTO customer (name, contact, industry) VALUES ('顧客D', 'd@example.com', '金融');
+INSERT INTO customer (name, contact, industry) VALUES ('顧客E', 'e@example.com', 'サービス');
+INSERT INTO customer (name, contact, industry) VALUES ('顧客F', 'f@example.com', 'IT');
+INSERT INTO customer (name, contact, industry) VALUES ('顧客G', 'g@example.com', '製造');
+INSERT INTO customer (name, contact, industry) VALUES ('顧客H', 'h@example.com', '流通');
+INSERT INTO customer (name, contact, industry) VALUES ('顧客I', 'i@example.com', '金融');
+INSERT INTO customer (name, contact, industry) VALUES ('顧客J', 'j@example.com', 'サービス');
+
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (1, '営業部', '田中', '佐藤', 'S', 10000, '2025-01-01', '2025-06-30', 'NEW_DEVELOPMENT');
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (2, '開発部', '鈴木', '高橋', 'A', 8000, '2025-02-01', '2025-07-31', 'MAINTENANCE');
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (3, '企画部', '佐々木', '伊藤', 'B', 6000, '2025-03-01', '2025-08-31', 'PACKAGE_INTRODUCTION');
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (4, '営業部', '渡辺', '山本', 'C', 4000, '2025-04-01', '2025-09-30', 'NEW_DEVELOPMENT');
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (5, '開発部', '中村', '小林', 'D', 2000, '2025-05-01', '2025-10-31', 'MAINTENANCE');
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (6, '企画部', '加藤', '吉田', 'S', 9000, '2025-06-01', '2025-11-30', 'PACKAGE_INTRODUCTION');
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (7, '営業部', '山田', '佐藤', 'A', 7000, '2025-07-01', '2025-12-31', 'NEW_DEVELOPMENT');
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (8, '開発部', '斎藤', '高橋', 'B', 5000, '2025-08-01', '2026-01-31', 'MAINTENANCE');
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (9, '企画部', '松本', '伊藤', 'C', 3000, '2025-09-01', '2026-02-28', 'PACKAGE_INTRODUCTION');
+INSERT INTO project (customer_id, department_name, project_manager, project_leader, project_rank, sales_amount, start_date, end_date, project_type) VALUES (10, '営業部', '井上', '山本', 'D', 1000, '2025-10-01', '2026-03-31', 'NEW_DEVELOPMENT');
