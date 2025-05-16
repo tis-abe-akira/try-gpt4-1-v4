@@ -1,9 +1,11 @@
 package com.example.try_gpt4_1.feature.customer.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 public class CustomerRequestDto {
     @NotBlank
+    @Size(max = 5, message = "nameは5文字以内で入力してね")
     private String name;
     @NotBlank
     private String contact;
