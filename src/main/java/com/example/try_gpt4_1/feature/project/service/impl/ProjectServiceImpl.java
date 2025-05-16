@@ -1,6 +1,7 @@
 package com.example.try_gpt4_1.feature.project.service.impl;
 
 import com.example.try_gpt4_1.common.entity.Project;
+import com.example.try_gpt4_1.common.entity.ProjectRank;
 import com.example.try_gpt4_1.feature.project.dto.ProjectRequestDto;
 import com.example.try_gpt4_1.feature.project.dto.ProjectResponseDto;
 import com.example.try_gpt4_1.feature.project.repository.ProjectRepository;
@@ -42,11 +43,12 @@ public class ProjectServiceImpl implements ProjectService {
         project.setDepartmentName(dto.getDepartmentName());
         project.setProjectManager(dto.getProjectManager());
         project.setProjectLeader(dto.getProjectLeader());
-        project.setProjectRank(dto.getProjectRank());
         project.setSalesAmount(dto.getSalesAmount());
         project.setStartDate(dto.getStartDate());
         project.setEndDate(dto.getEndDate());
         project.setProjectType(dto.getProjectType());
+        // salesAmountからランク自動決定
+        project.setProjectRank(ProjectRank.of(dto.getSalesAmount()));
         projectRepository.insert(project);
         return toResponseDto(project);
     }
@@ -61,11 +63,12 @@ public class ProjectServiceImpl implements ProjectService {
         project.setDepartmentName(dto.getDepartmentName());
         project.setProjectManager(dto.getProjectManager());
         project.setProjectLeader(dto.getProjectLeader());
-        project.setProjectRank(dto.getProjectRank());
         project.setSalesAmount(dto.getSalesAmount());
         project.setStartDate(dto.getStartDate());
         project.setEndDate(dto.getEndDate());
         project.setProjectType(dto.getProjectType());
+        // salesAmountからランク自動決定
+        project.setProjectRank(ProjectRank.of(dto.getSalesAmount()));
         projectRepository.update(project);
         return toResponseDto(project);
     }

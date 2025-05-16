@@ -46,15 +46,15 @@
 
 ### プロジェクト新規作成
 - POST /api/projects
-- リクエスト: ProjectRequestDto
-- レスポンス: ProjectResponseDto
+- リクエスト: ProjectRequestDto（projectRankは不要、salesAmountで自動決定）
+- レスポンス: ProjectResponseDto（自動決定されたprojectRankを含む）
 - 201: 作成成功
 - 400: バリデーションエラー or customerId不正
 
 ### プロジェクト更新
 - PUT /api/projects/{id}
-- リクエスト: ProjectRequestDto
-- レスポンス: ProjectResponseDto
+- リクエスト: ProjectRequestDto（projectRankは不要、salesAmountで自動決定）
+- レスポンス: ProjectResponseDto（自動決定されたprojectRankを含む）
 - 404: 存在しない場合
 - 400: バリデーションエラー or customerId不正
 

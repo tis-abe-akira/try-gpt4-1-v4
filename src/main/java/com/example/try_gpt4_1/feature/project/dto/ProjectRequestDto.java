@@ -1,6 +1,5 @@
 package com.example.try_gpt4_1.feature.project.dto;
 
-import com.example.try_gpt4_1.common.entity.ProjectRank;
 import com.example.try_gpt4_1.common.entity.ProjectType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -15,8 +14,6 @@ public class ProjectRequestDto {
     private String projectManager;
     @NotBlank
     private String projectLeader;
-    @NotNull
-    private ProjectRank projectRank;
     @NotNull
     private Integer salesAmount;
     @NotNull
@@ -57,14 +54,6 @@ public class ProjectRequestDto {
 
     public void setProjectLeader(String projectLeader) {
         this.projectLeader = projectLeader;
-    }
-
-    public ProjectRank getProjectRank() {
-        return projectRank;
-    }
-
-    public void setProjectRank(ProjectRank projectRank) {
-        this.projectRank = projectRank;
     }
 
     public Integer getSalesAmount() {

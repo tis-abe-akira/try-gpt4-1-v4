@@ -276,9 +276,6 @@ components:
           type: string
         projectLeader:
           type: string
-        projectRank:
-          type: string
-          enum: [S, A, B, C, D]
         salesAmount:
           type: integer
         startDate:
@@ -295,11 +292,12 @@ components:
         - departmentName
         - projectManager
         - projectLeader
-        - projectRank
         - salesAmount
         - startDate
         - endDate
         - projectType
+      description: |
+        projectRankはリクエスト不要。salesAmountで自動決定される。
     ProjectResponseDto:
       type: object
       properties:
